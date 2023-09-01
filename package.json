@@ -1,0 +1,30 @@
+{
+  "name": "stackblitz-starters-rsveyk",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/react": "^18.2.19",
+    "axios": "^1.4.0",
+    "bulma": "^0.9.4",
+    "date-fns": "^2.30.0",
+    "moment": "^2.29.4",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-axios": "^2.0.6",
+    "react-datepicker": "^4.16.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "5.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "latest",
+    "eslint": "^7.20.0"
+  }
+}
