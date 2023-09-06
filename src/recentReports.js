@@ -1,12 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Header from './header';
 import { Link } from 'react-router-dom';
 import { getMenuByReportId } from './menuUtils';
-const RecentReports = ({ reportIds }) => {
+import { getRecentReports } from './reports';
+const RecentReports = () => {
   const [reports, setReports] = React.useState([]);
   React.useEffect(() => {
-    // we are using useEffect to listen to params and generate the report details from reportids
+    // we are using useEffect to call the rest api and update the data
+    const reportIds = getRecentReports();
     if (reportIds) {
       // verifying if reports have data
       let rpts = reportIds.map((report) => {
@@ -16,7 +17,7 @@ const RecentReports = ({ reportIds }) => {
       // console.log(rpts);
       setReports(rpts); // setting reports data to local state variable for rendering
     }
-  }, [reportIds]);
+  });
   return (
     <div class="box">
       <Header size="4" color="primary">
@@ -32,10 +33,5 @@ const RecentReports = ({ reportIds }) => {
     </div>
   );
 };
-RecentReports.propTypes = {
-  reportIds: PropTypes.array,
-};
-RecentReports.defaultProps = {
-  reportIds: [],
-};
+
 export default RecentReports;
