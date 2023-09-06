@@ -1,1 +1,3 @@
-export const recentReports = ['22222', '33333'];
+export const getRecentReports = () => {
+  return simulateRest(recentReports);
+};
